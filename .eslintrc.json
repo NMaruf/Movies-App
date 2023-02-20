@@ -1,0 +1,72 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "ignorePatterns": ["node_modules", "dist", "build"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "airbnb"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react", "jsx-a11y", "import", "react-hooks", "prettier"
+    ],
+    "rules": {
+        "indent": ["error", 2], //отступ в 2 пробела:
+        "no-plusplus": "off", //разрешить оператор ++
+        "max-len": ["error", {
+            "code": 125
+        }],                   // длина строки > 120
+        "object-curly-newline": ["error", { "multiline": true }],
+        "react/jsx-one-expression-per-line": "off", // один элемент на строку
+        "react/jsx-props-no-spreading": "off", // spread оператор
+        "prettier/prettier": "error",
+        "linebreak-style": [0, "unix"], //Перенос строки
+        "quotes": ["error", "single"], // Ковычки двойные одинарные
+        "semi": ["error", "never"],
+        "react/react-in-jsx-scope": "off", // Строка импорта React должна быть
+        "react/prefer-stateless-function": "off",
+        "react/destructuring-assignment": "off",
+        "react/prop-types": 0,
+        "no-underscore-dangle": "off", // нижнее подчеркивание в переменной
+        "no-return-await": "off",
+        "import/no-unresolved": [2, { "caseSensitive": false }], // игнорирование регистра
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // разрешить js, jsx
+        "import/order": [
+            2,
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "newlines-between": "always"
+            }
+        ]
+    },
+    "settings": {
+        "version": "detect",
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"],
+                "moduleDirectory": ["node_modules", "src/"]
+            }
+        }
+    }
+}
