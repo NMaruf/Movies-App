@@ -7,7 +7,14 @@ const { Title, Paragraph, Text } = Typography
 export default class Item extends Component {
   render() {
     const { id, title, date, overview, poster } = this.props
+    let source
     const _img = 'https://image.tmdb.org/t/p/original'
+
+    if (poster === null) {
+      source = '../images/default.avif'
+    } else {
+      source = `${_img}${poster}`
+    }
 
     return (
       <li className="movie" id={id}>
@@ -29,7 +36,7 @@ export default class Item extends Component {
         >
           {overview}
         </Paragraph>
-        <Image src={`${_img}${poster}`} alt="IMG" className="img" />
+        <Image src={source} alt="IMG" className="img" />
       </li>
     )
   }

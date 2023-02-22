@@ -1,4 +1,19 @@
 .movies {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.spinner {
+    margin: 50px auto;
+}
+
+.pagination {
+    display: block;
+    margin: 0px auto;
+}
+
+ul .alert {
+    width: 100%;
 }
