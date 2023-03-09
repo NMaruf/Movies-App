@@ -43,6 +43,7 @@
         "react/prop-types": 0,
         "no-underscore-dangle": "off", // нижнее подчеркивание в переменной
         "no-return-await": "off",
+        "comma-dangle": "off", // отмена запятых
         "class-methods-use-this": "off",
         "import/no-unresolved": [2, { "caseSensitive": false }], // игнорирование регистра
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // разрешить js, jsx
